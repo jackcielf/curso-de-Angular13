@@ -1,0 +1,18 @@
+<div class="class">
+  <h2>{{ "to way data binding" | titlecase }}</h2>
+  <form>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      name="name"
+      id=""
+      placeholder="{{ placeholder }}"
+    />
+
+    <input type="submit" value="Enviar" />
+
+    <div *ngIf="name !== ''">
+      <p>O nome é: {{ name }}</p>
+    </div>
+  </form>
+</div>
