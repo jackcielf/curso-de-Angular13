@@ -3,7 +3,7 @@
   <ul>
     <!-- Renderizando uma lista de animais -->
     <li *ngFor="let animal of animals">
-        Nome: {{ animal.name }} | Tipo: {{animal.type}}
+        Nome: <a routerLink="/list/{{animal.id}}">{{ animal.name }}</a> | Tipo: {{animal.type}}
         <button (click)="showAge(animal)">Ver idade</button>
         <button (click)="removeAnimal(animal)">Remover</button>
     </li>
